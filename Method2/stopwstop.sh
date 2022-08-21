@@ -13,8 +13,8 @@
 set -e
 
 PROGRESS=$(./stopwprogress)
-rm "$TMPDIR/stopwatch-start.txt"
+rm "$TMPDIR/stopwatch-start.txt" 2>/dev/null
 
-pbcopy < "$PROGRESS"
+pbcopy < "$PROGRESS" 2>/dev/null
 
 echo "Final Time -> $PROGRESS"
